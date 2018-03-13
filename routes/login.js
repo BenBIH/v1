@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 });
 
-
+/* Post login data */
 router.post('/', function(req, res) {
 
     if (req.body.user == 'ben' && req.body.pass == '123') {
