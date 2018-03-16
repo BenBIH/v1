@@ -2,10 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET login page. */
-router.get('/', function(req, res, next) {
-  res.sendfile('./views/login.html');
-
-
+router.get('/', function(req, res) {
+    res.render('login');
 });
 
 /* Post login data */

@@ -6,8 +6,15 @@ var fs = require('fs');
 
 /* GET contact page. */
 router.get('/', function(req, res) {
-  res.sendfile('./views/contact.html');
+    res.render('contact', {title: 'Express'});
 });
+
+
+
+// app.get('/your/path', function(req, res) {
+//     //viewname can include or omit the filename extension
+//     res.render(__dirname + '/folder/with/views/viewname')); 
+// });
 
 /* POST contact page info */
 router.post('/', function(req, res) {

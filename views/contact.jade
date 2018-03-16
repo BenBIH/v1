@@ -1,0 +1,15 @@
+link(rel='stylesheet', href='./stylesheets/style.css')
+.container
+  form#contact(action='/contact', method='post')
+    h3 Contact us!
+    h4 Tell us how can we help?
+    fieldset
+      input(placeholder='Your name', type='text', name='name', tabindex='1', autofocus='')
+    fieldset
+      input(placeholder='Your Email Address', type='email', name='email', tabindex='2')
+    fieldset
+      input(placeholder='Your Phone Number', type='number', name='tel', tabindex='3')
+    fieldset
+      textarea(placeholder='Type your Message Here....', name='message', tabindex='5')
+    fieldset
+      button#contact-submit(type='submit', data-submit='...Sending') Submit
