@@ -16,7 +16,7 @@ router.post('/', function(req, res) {
     
     else {
         console.log('Vracam na pocetak');
-        res.sendfile('./views/login.html');
+        res.render('login');
     }
     });
 
