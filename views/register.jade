@@ -1,7 +1,7 @@
 link(rel='stylesheet', type='text/css', href='./stylesheets/style.css')
 html
   body
-    form(method='post', action='/users')
+    form(method='post')
       .container
         h1 Sign Up
         p Please fill in this form to create an account.
@@ -23,7 +23,7 @@ html
         input(type='password', placeholder='Enter Password', name='psw', required='')
         label(for='psw-repeat')
           b Repeat Password
-        input(type='password', placeholder='Repeat Password', name='psw-repeat', required='')
+        input(type='password', placeholder='Repeat Password', name='pswrepeat', required='')
         label
          button.btn.btn-primary.btn-block.btn-large(type='submit')  Sign Up
          b Or Cancel   

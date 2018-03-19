@@ -4,6 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://127.0.0.1/final';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -13,8 +22,19 @@ var success = require('./routes/success');
 var register = require('./routes/register');
 var users = require ('./routes/users');
 
+// mongo test
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
 
+// Connection URL
+var url = 'mongodb://127.0.0.1/final';
+// Use connect method to connect to the Server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Mongo radi, baza je upp!");
 
+  db.close();
+});
 
 var app = express();
 
