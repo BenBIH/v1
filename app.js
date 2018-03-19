@@ -11,6 +11,7 @@ var contact = require('./routes/contact');
 var login = require('./routes/login');
 var success = require('./routes/success');
 var register = require('./routes/register');
+var users = require ('./routes/users');
 
 
 
@@ -35,6 +36,7 @@ app.use('/contact', contact);
 app.use('/login', login);
 app.use('/success', success);
 app.use('/register', register);
+app.use('./users', users);
 
 
 // catch 404 and forward to error handler
