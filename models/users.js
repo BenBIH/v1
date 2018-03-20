@@ -9,4 +9,4 @@ var UserSchema = new mongoose.Schema({
   psw: String,
 }, {timestamps: true});
 
-mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
