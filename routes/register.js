@@ -25,7 +25,7 @@ router.post('/', function(req,res,next) {
 
     }, function() {
    
-       res.redirect('users');
+       res.redirect('login');
 
     });
   
