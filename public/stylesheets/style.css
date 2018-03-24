@@ -302,5 +302,19 @@ body {
 	  clear: both;
 	  display: table;
   }
+
+  .prikaziusere {
+
+	margin-top: 40px;
+	margin: 0 auto;
+	max-width: 690px;
+	padding: 40px 40px;
+
+  }
   
+  .prikaziusere h1 {
+
+	color: aqua;
+
+  }
   

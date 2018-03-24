@@ -18,7 +18,7 @@ router.post('/', function(req,res,next) {
     
       email: req.body.email,
       username: req.body.username,
-      real_name: req.body.realusername,
+      real_name: req.body.realname,
       birth_date: req.body.birth_date,
       psw: req.body.psw,
       pswrepeat: req.body.pswrepeat
