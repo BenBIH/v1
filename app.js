@@ -9,6 +9,8 @@ var mongoDB = 'mongodb://127.0.0.1/users';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
+var session = require('express-session')
+
 
 
 
