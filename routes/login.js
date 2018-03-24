@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
   Users.findOne({ username: req.body.nickname }, function(err, users) {
     console.log(err);
     if (!users) {
-      res.render('login');
+      res.render('/login');
     } else {
       if (req.body.sifra === users.psw) {
         res.redirect('/success');
