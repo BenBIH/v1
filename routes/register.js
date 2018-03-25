@@ -13,7 +13,7 @@ router.post('/', function(req,res,next) {
   if  (req.body.email != "" && req.body.username != "" && req.body.real_name != "" && req.body.birth_date != "")
 
   if ( req.body.password == req.body.pswrepeat) {
-    
+
     User.create({
     
       email: req.body.email,

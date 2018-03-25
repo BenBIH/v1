@@ -15,10 +15,12 @@ router.get('/', function(req, res, next) {
     console.log(err);
     if (!user) {
       res.render('/login');
-    } else {
+    } 
+    else {
       if (req.body.password === user.password) {
-        res.redirect('/success');
-      } else {
+        res.redirect('/users');
+      }  
+      else {
           console.log('Ne radi');
           res.redirect('/login');
     }};
