@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Users = require('../models/users.js');
+var User = require('../models/users.js');
 
 
 /* GET login page. */
@@ -11,12 +11,12 @@ router.get('/', function(req, res, next) {
 
 /* login from mongo */
   router.post('/', function(req,res,next) {
-  Users.findOne({ username: req.body.nickname }, function(err, users) {
+  User.findOne({ username: req.body.nickname }, function(err, user) {
     console.log(err);
-    if (!users) {
+    if (!user) {
       res.render('/login');
     } else {
-      if (req.body.sifra === users.psw) {
+      if (req.body.password === user.password) {
         res.redirect('/success');
       } else {
           console.log('Ne radi');
@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-/* Post login data */
+/* login iz v1 zadatka sa fix poacima */
 /* router.post('/', function(req, res) {
 
     if (req.body.user == 'ben' && req.body.pass == '123') {

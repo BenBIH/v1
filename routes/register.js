@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req,res,next) {
   if  (req.body.email != "" && req.body.username != "" && req.body.real_name != "" && req.body.birth_date != "")
 
-  if ( req.body.psw == req.body.pswrepeat) {
+  if ( req.body.password == req.body.pswrepeat) {
     
     User.create({
     
@@ -20,8 +20,8 @@ router.post('/', function(req,res,next) {
       username: req.body.username,
       real_name: req.body.realname,
       birth_date: req.body.birth_date,
-      psw: req.body.psw,
-      pswrepeat: req.body.pswrepeat
+      password: req.body.password,
+      passwordConf: req.body.pswrepeat
 
     }, function() {
    

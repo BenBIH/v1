@@ -1,12 +1,37 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+// var bcrypt = require('bcrypt');
 
 var UserSchema = new mongoose.Schema({
-  email: String,
-  username: String,
-  real_name: String,
-  birth_date: String,
-  psw: String,
-}, {timestamps: true});
+  email: {
+    type: String,
+    unique: true,
+    required: true,
+    trim: true
+  },
+  username: {
+    type: String,
+    unique: true,
+    required: true,
+    trim: true
+  },
+  real_name: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  birth_date: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  passwordConf: {
+    type: String,
+    required: true,
+  }
+}); 
 
 module.exports = mongoose.model('User', UserSchema);
