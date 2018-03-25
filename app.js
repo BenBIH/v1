@@ -14,6 +14,8 @@ var bcrypt = require('bcrypt');
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
 const someOtherPlaintextPassword = 'not_bacon';
+var session = require('express-session')
+
 
 
 
