@@ -14,6 +14,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
 const someOtherPlaintextPassword = 'not_bacon';
+var expressValidator = require('express-validator');
 
 
 
@@ -58,6 +59,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(expressValidator());
 app.use(expressSession({
   secret: 'work hard',
   resave: false,

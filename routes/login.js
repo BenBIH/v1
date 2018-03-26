@@ -11,6 +11,7 @@ router.get('/', function (req, res, next) {
 
 /* login from mongo */
 router.post('/', function (req, res, next) {
+  
   if (req.body.nickname && req.body.password) {
     User.authenticate(req.body.nickname, req.body.password, function (error, user) {
       if (error || !user) {

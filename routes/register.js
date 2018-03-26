@@ -6,10 +6,11 @@ var User = require('../models/users.js');
 
 /* GET register page. */
 router.get('/', function (req, res, next) {
-  res.render('register');
+  res.render('register')
 });
 
 router.post('/', function (req, res, next) {
+
   if (req.body.email != "" && req.body.username != "" && req.body.real_name != "" && req.body.birth_date != "")
 
     if (req.body.password == req.body.pswrepeat) {
