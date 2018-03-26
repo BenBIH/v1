@@ -3,10 +3,13 @@ var router = express.Router();
 var Users = require('../models/users.js');
 
 /* GET users listing. */
-router.get('/', function(req,res,next) {
-  Users.find({}, function(err, data) {
+router.get('/', function (req, res, next) {
+  Users.find({}, function (err, data) {
     if (!err) {
-      res.render('users', { title: 'Users', data: data});
+      res.render('users', {
+        title: 'Users',
+        data: data
+      });
     } else {
       throw err;
     }

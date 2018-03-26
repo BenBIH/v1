@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Register</title>
-		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css"/>
-	</head>
-	<body>
-		<div class="navbar">
+
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/style.css" />
+</head>
+
+<body>
+	<div class="navbar">
 		<ul>
 			<li>
 				<a class="active" href="/">Home</a>
@@ -20,44 +22,45 @@
 				<a href="/register">Register page</a>
 			</li>
 			<li>
-					<a href="/users">Users page</a>
+				<a href="/users">Users page</a>
 			</li>
 		</ul>
+	</div>
+	<form id="registracija" method="post">
+		<div class="container">
+			<h1>Sign Up</h1>
+			<p>Please fill in this form to create an account.</p>
+			<label for="1">
+				<b>Email</b>
+			</label>
+			<input type="text" placeholder="Enter Email" name="email" required="" autofocus/>
+			<label for="2">
+				<b>Username</b>
+			</label>
+			<input type="text" placeholder="Enter username" name="username" required="" />
+			<label for="3">
+				<b>Full Name</b>
+			</label>
+			<input type="text" placeholder="Enter your name" name="realname" required="" />
+			<label for="4">
+				<b>Birth date</b>
+			</label>
+			<input type="date" name="birth_date" required="" />
+			<label for="5">
+				<b>Password</b>
+			</label>
+			<input type="password" placeholder="Enter Password" name="password" required="" />
+			<label for="6">
+				<b>Repeat Password</b>
+			</label>
+			<input type="password" placeholder="Repeat Password" name="pswrepeat" required="" />
+			<label>
+				<button type="submit" class="btn btn-primary btn-block btn-large"> Sign Up</button>
+				<b>Or Cancel </b>
+				<a href="http://127.0.0.1:3000/">Cancel</a>
+			</label>
 		</div>
-		<form id="registracija" method="post">
-			<div class="container">
-				<h1>Sign Up</h1>
-				<p>Please fill in this form to create an account.</p>
-				<label for="1">
-					<b>Email</b>
-				</label>
-				<input type="text" placeholder="Enter Email" name="email" required="" autofocus/>
-				<label for="2">
-					<b>Username</b>
-				</label>
-				<input type="text" placeholder="Enter username" name="username" required=""/>
-				<label for="3">
-					<b>Full Name</b>
-				</label>
-				<input type="text" placeholder="Enter your name" name="realname" required=""/>
-				<label for="4">
-					<b>Birth date</b>
-				</label>
-				<input type="date" name="birth_date" required=""/>
-				<label for="5">
-					<b>Password</b>
-				</label>
-				<input type="password" placeholder="Enter Password" name="password" required=""/>
-				<label for="6">
-					<b>Repeat Password</b>
-				</label>
-				<input type="password" placeholder="Repeat Password" name="pswrepeat" required=""/>
-				<label>
-					<button type="submit" class="btn btn-primary btn-block btn-large"> Sign Up</button>
-					<b>Or Cancel   </b>
-					<a href="http://127.0.0.1:3000/">Cancel</a>
-				</label>
-			</div>
-		</form>
-	</body>
+	</form>
+</body>
+
 </html>

@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Users list</title>
-		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css"/>
-	</head>
-	<body>
-		<div class="navbar">
-			<ul>
-				<li>
-					<a class="active" href="/">Home</a>
-				</li>
-				<li>
-					<a href="/login">Login</a>
-				</li>
-				<li>
-					<a href="/contact">Contact page</a>
-				</li>
-				<li>
-					<a href="/register">Register page</a>
-				</li>
-			</ul>
-		</div>
-		<div class="prikaziusere">
-			<h1> User list from 
-				<a href="http://127.0.0.1:3000/register">Registration</a>
-			</h1><% data.forEach(function(users) { %>
+
+<head>
+	<title>Users list</title>
+	<link rel="stylesheet" type="text/css" href="./stylesheets/style.css" />
+</head>
+
+<body>
+	<div class="navbar">
+		<ul>
+			<li>
+				<a class="active" href="/">Home</a>
+			</li>
+			<li>
+				<a href="/login">Login</a>
+			</li>
+			<li>
+				<a href="/contact">Contact page</a>
+			</li>
+			<li>
+				<a href="/register">Register page</a>
+			</li>
+		</ul>
+	</div>
+	<div class="prikaziusere">
+		<h1> User list from
+			<a href="http://127.0.0.1:3000/register">Registration</a>
+		</h1>
+		<% data.forEach(function(users) { %>
 			<p>
-				<strong>User Email: </strong><%= users.email %> - 
-				<strong>Username: </strong><%= users.username  %> - 
-				<strong>Reeal Name: </strong><%= users.real_name %> - 
-				<strong>Birth Date: </strong><%= users.birth_date  %>
-			</p><% }); %>
-		</div>
-	</body>
+				<strong>User Email: </strong>
+				<%= users.email %> -
+					<strong>Username: </strong>
+					<%= users.username  %> -
+						<strong>Reeal Name: </strong>
+						<%= users.real_name %> -
+							<strong>Birth Date: </strong>
+							<%= users.birth_date  %>
+			</p>
+			<% }); %>
+	</div>
+</body>
+
 </html>

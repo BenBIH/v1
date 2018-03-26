@@ -9,7 +9,7 @@ var mongoDB = 'mongodb://127.0.0.1/users';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
-var session = require('express-session');
+var expressSession = require('express-session');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\/\P4$$w0rD';
@@ -27,16 +27,16 @@ var contact = require('./routes/contact');
 var login = require('./routes/login');
 var success = require('./routes/success');
 var register = require('./routes/register');
-var users = require ('./routes/users');
+var users = require('./routes/users');
 
 // mongo test
-var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+var MongoClient = require('mongodb').MongoClient,
+  assert = require('assert');
 
 // Connection URL
 var url = 'mongodb://127.0.0.1/final';
 // Use connect method to connect to the Server
-MongoClient.connect(url, function(err, db) {
+MongoClient.connect(url, function (err, db) {
   assert.equal(null, err);
   console.log("Mongo radi, baza je upp!");
 
@@ -53,12 +53,14 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
+app.use(expressSession({
   secret: 'work hard',
-  resave: true,
+  resave: false,
   saveUninitialized: false
 }));
 
@@ -72,14 +74,14 @@ app.use('./users', users);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
