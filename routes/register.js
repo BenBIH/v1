@@ -33,8 +33,9 @@ router.post('/', function(req,res,next) {
   }
 
 else {
-  var err = new Error("Sifre se ne poklapaju");
+  var err = new Error('Sifre se ne poklapaju');
   err.status = 400;
+  res.send("Sifre se ne poklapaju'");
   return next(err);
     }
   });

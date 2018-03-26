@@ -11,21 +11,18 @@ router.get('/', function(req, res, next) {
 
 /* login from mongo */
   router.post('/', function(req,res,next) {
-  User.findOne({ username: req.body.nickname }, function(err, user) {
-    console.log(err);
-    if (!user) {
-      res.render('/login');
-    } 
-    else {
-      if (req.body.password === user.password) {
-        res.redirect('/users');
-      }  
-      else {
-          console.log('Ne radi');
-          res.redirect('/login');
-    }};
+ if (req.body.nickname && req.body.password) {
+      User.authenticate(req.body.nickname, req.body.password, function (error, user) {
+        if (error || !user) {
+          var err = new Error('Korisnicko ime ili sifra nije ok');
+          res.send("Korisnicko ime ili sifra nije ok'");
+          err.status = 401;
+          return next(err);
+        } else {
+          return res.redirect('/users');
+        }
+    })};
   });
-});
 
 module.exports = router;
 
