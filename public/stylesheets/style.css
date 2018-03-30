@@ -498,3 +498,9 @@ button:hover {
 #registracija {
 	margin: 50px;
 }
+
+.container h2 {
+	color: white;
+	text-align: center;
+	margin: 5px;
+}
