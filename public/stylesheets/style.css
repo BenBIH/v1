@@ -440,6 +440,7 @@ button:hover {
 }
 
 .prikaziusere {
+	position: absolute;
 	margin-top: 40px;
 	margin: 50px 400px;
 	max-width: 690px;
