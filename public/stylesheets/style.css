@@ -31,7 +31,7 @@ body {
 	background: #0CF;
 }
 
-.container {
+.container1 {
 	background: #c3c3c30d;
 	max-width: 400px;
 	width: 100%;
@@ -427,7 +427,7 @@ button:hover {
 
 /* Add padding to container elements */
 
-.container {
+.container1 {
 	padding: 16px;
 }
 
@@ -454,7 +454,7 @@ button:hover {
 	text-align: center;
 }
 
-.navbar {
+.navbar1 {
 	overflow: hidden;
 	position: fixed;
 	top: 0%;
@@ -462,18 +462,18 @@ button:hover {
 	width: 100%;
 }
 
-.navbar ul {
+.navbar1 ul {
 	margin: 0;
 	padding: 12px 0;
 	list-style: none;
 	height: auto;
 }
 
-.navbar li {
+.navbar1 li {
 	float: left;
 }
 
-.navbar li a {
+.navbar1 li a {
 	display: block;
 	color: white;
 	text-align: center;
@@ -481,7 +481,7 @@ button:hover {
 	text-decoration: none;
 }
 
-.navbar li a:hover {
+.navbar1 li a:hover {
 	background-color: #111;
 	border-radius: 20px;
 	-webkit-border-radius: 20px;
@@ -504,4 +504,13 @@ button:hover {
 	color: white;
 	text-align: center;
 	margin: 5px;
+}
+
+.container {
+	margin-top: 70px;
+	background: #c3c3c30d;
+	top: 20%;
+	left: 16%;
+	max-width: 500px;
+	height: 100px;
 }
