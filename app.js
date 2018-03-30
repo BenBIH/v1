@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://127.0.0.1/users';
+var mongoDB = 'mongodb://ben:ben123@ds229909.mlab.com:29909/users';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -35,7 +35,7 @@ var MongoClient = require('mongodb').MongoClient,
   assert = require('assert');
 
 // Connection URL
-var url = 'mongodb://127.0.0.1/final';
+var url = 'mongodb://ben:ben123@ds229909.mlab.com:29909/users';
 // Use connect method to connect to the Server
 MongoClient.connect(url, function (err, db) {
   assert.equal(null, err);
